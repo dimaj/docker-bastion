@@ -1,0 +1,12 @@
+name: Docker Image CI
+
+on: [ create ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - run: echo ${{ vars.GITHUB_REF }}
+#     - name: Build the Docker image
+#       run: docker build . --file Dockerfile --tag dimaj/docker-bastion:$(date +%s)
