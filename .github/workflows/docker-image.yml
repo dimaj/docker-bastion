@@ -7,6 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
-    - run: echo ${{ vars.GITHUB_REF }}
+    - run: "echo ref: $GITHUB_REF"
+    - run: "echo refName: $GITHUB_REF_NAME"
 #     - name: Build the Docker image
 #       run: docker build . --file Dockerfile --tag dimaj/docker-bastion:$(date +%s)
